@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Site Pessoal</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+    body { background: #f4f4f4; color: #333; }
+    header { background: #222; color: #fff; padding: 20px; }
+    nav { display: flex; justify-content: space-between; align-items: center; }
+    nav a { color: #fff; margin-left: 15px; text-decoration: none; font-weight: bold; }
+    section { padding: 60px 20px; max-width: 1000px; margin: auto; }
+    h1, h2 { margin-bottom: 20px; }
+    .hero { text-align: center; }
+    .hero p { font-size: 18px; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    footer { background: #222; color: #fff; text-align: center; padding: 20px; }
+    button { padding: 10px 20px; border: none; background: #222; color: #fff; cursor: pointer; border-radius: 5px; }
+    button:hover { background: #444; }
+    input, textarea { width: 100%; padding: 10px; margin-top: 10px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <h1>Meu Site</h1>
+    <div>
+      <a href="#inicio">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+    </div>
+  </nav>
+</header>
+
+<section id="inicio" class="hero">
+  <h2>Baixar o Word</h2>
+  <p>Clique no botão abaixo para baixar o arquivo:</p>
+  <br>
+  <a href="MCU_Checklist_Word_FINAL_1_104.docx" download>
+    <button>📄 Baixar MCU_Checklist_Word_FINAL_1_104.docx</button>
+  </a>
+</section>
+
+<section id="sobre">
+  <h2>Sobre mim</h2>
+  <p>Escreva aqui uma descrição sobre você, seus interesses, estudos ou hobbies. Este site é totalmente pessoal e pode ser adaptado ao seu estilo.</p>
+</section>
+
+<section id="projetos">
+  <h2>Meus projetos</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Projeto 1</h3>
+      <p>Descrição do projeto.</p>
+    </div>
+    <div class="card">
+      <h3>Projeto 2</h3>
+      <p>Descrição do projeto.</p>
+    </div>
+    <div class="card">
+      <h3>Projeto 3</h3>
+      <p>Descrição do projeto.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contato">
+  <h2>Contato</h2>
+  <form onsubmit="enviarMensagem(event)">
+    <input type="text" placeholder="Seu nome" required>
+    <input type="email" placeholder="Seu email" required>
+    <textarea rows="5" placeholder="Sua mensagem"></textarea>
+    <br><br>
+    <button type="submit">Enviar</button>
+  </form>
+  <p id="msg"></p>
+</section>
+
+<footer>
+  <p>© 2025 - Meu Site Pessoal</p>
+</footer>
+
+<script>
+  function enviarMensagem(e) {
+    e.preventDefault();
+    document.getElementById('msg').innerText = 'Mensagem enviada com sucesso!';
+  }
+</script>
+
+</body>
+</html>
